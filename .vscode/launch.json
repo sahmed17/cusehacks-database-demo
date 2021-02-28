@@ -1,0 +1,137 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name":"Run Demo",
+            "type":"python",
+            "request":"launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "program":"${workspaceRoot}\\demo.py",
+            "cwd": "${workspaceRoot}",
+            "args": [],
+            "env": {
+                "PASSWORD": "",
+                "CLUSTER": "",
+            }
+        },
+        {
+            "name": "Run Web Server",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "program": "${workspaceRoot}\\demo\\manage.py",
+            "cwd": "${workspaceRoot}\\demo",
+            "args": [
+                "runserver"
+            ],
+            "django": true,
+            "env": {
+                "APP_ENV": "development",
+                "APP_ENV_LOCAL": "local",
+                "DATABASE_ENGINE": "django.db.backends.postgresql",
+                "DATABASE_DB": "postgres",
+                "DATABASE_USER": "postgres",
+                "DATABASE_PASSWORD": "",
+                "DATABASE_HOST": "",
+                "DATABASE_PORT": "",
+            },
+        },
+        {
+            "name": "User",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "program": "${workspaceRoot}\\demo\\manage.py",
+            "cwd": "${workspaceRoot}\\demo",
+            "args": [
+                "createsuperuser"
+            ],
+            "django": true,
+            "env": {
+                "APP_ENV": "development",
+                "APP_ENV_LOCAL": "local",
+                "DATABASE_ENGINE": "django.db.backends.postgresql",
+                "DATABASE_DB": "postgres",
+                "DATABASE_USER": "postgres",
+                "DATABASE_PASSWORD": "",
+                "DATABASE_HOST": "",
+                "DATABASE_PORT": "",
+            },
+        },
+        {
+            "name": "Make Migrations",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "program": "${workspaceRoot}\\demo\\manage.py",
+            "cwd": "${workspaceRoot}\\demo",
+            "args": [
+                "makemigrations"
+            ],
+            "django": true,
+            "env": {
+                "APP_ENV": "development",
+                "APP_ENV_LOCAL": "local",
+                "DATABASE_ENGINE": "django.db.backends.postgresql",
+                "DATABASE_DB": "postgres",
+                "DATABASE_USER": "postgres",
+                "DATABASE_PASSWORD": "",
+                "DATABASE_HOST": "",
+                "DATABASE_PORT": "",
+            },
+        },
+        {
+            "name": "Run Migrations",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "program": "${workspaceRoot}\\demo\\manage.py",
+            "cwd": "${workspaceRoot}\\demo",
+            "args": [
+                "migrate"
+            ],
+            "django": true,
+            "env": {
+                "APP_ENV": "development",
+                "APP_ENV_LOCAL": "local",
+                "DATABASE_ENGINE": "django.db.backends.postgresql",
+                "DATABASE_DB": "postgres",
+                "DATABASE_USER": "postgres",
+                "DATABASE_PASSWORD": "",
+                "DATABASE_HOST": "",
+                "DATABASE_PORT": "",
+            },
+        },
+        {
+            "name": "Clear DB",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "program": "${workspaceRoot}\\demo\\manage.py",
+            "cwd": "${workspaceRoot}\\demo",
+            "args": [
+                "flush"
+            ],
+            "django": true,
+            "env": {
+                "APP_ENV": "development",
+                "APP_ENV_LOCAL": "local",
+                "DATABASE_ENGINE": "django.db.backends.postgresql",
+                "DATABASE_DB": "postgres",
+                "DATABASE_USER": "postgres",
+                "DATABASE_PASSWORD": "",
+                "DATABASE_HOST": "",
+                "DATABASE_PORT": "",
+            },
+        },
+    ]
+}
